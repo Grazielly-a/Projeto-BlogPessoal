@@ -43,17 +43,20 @@ public class Usuarios {
 	@Size(max = 5000, message = "O link da foto não pode ser maior do que 5000 caracteres")
 	private String foto;
 	
+	private String tipo;
+	
 	@OneToMany(mappedBy = "usuarios", cascade = CascadeType.REMOVE)
 	@JsonIgnoreProperties("usuarios")
-	private List<Postagens> postagens;
+	private List<Postagens> postagens;	
 	
 	
-	public Usuarios(Long id, String nome, String usuario, String senha, String foto) {
+	public Usuarios(Long id, String nome, String usuario, String senha, String foto, String tipo) {
 		this.id = id;
 		this.nome = nome;
 		this.usuario = usuario;
 		this.senha = senha;
 		this.foto = foto;
+		this.tipo = tipo;
 	}
 
 	
@@ -100,6 +103,17 @@ public class Usuarios {
 	public void setFoto(String foto) {
 		this.foto = foto;
 	}
+		
+
+	public String getTipo() {
+		return tipo;
+	}
+
+
+	public void setTipo(String tipo) {
+		this.tipo = tipo;
+	}
+
 
 	public List<Postagens> getPostagens() {
 		return postagens;
@@ -107,8 +121,6 @@ public class Usuarios {
 
 	public void setPostagens(List<Postagens> postagens) {
 		this.postagens = postagens;
-	}
-	
-	
+	}	
 
 }

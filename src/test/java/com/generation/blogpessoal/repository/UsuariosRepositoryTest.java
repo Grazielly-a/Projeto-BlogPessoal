@@ -30,16 +30,16 @@ public class UsuariosRepositoryTest {
 		repository.deleteAll();
 
 		repository.save(
-				new Usuarios(0L, "João da Silva", "joao@email.com.br", "13465278", "https://i.imgur.com/FETvs2O.jpg"));
+				new Usuarios(0L, "João da Silva", "joao@email.com.br", "13465278", "https://i.imgur.com/FETvs2O.jpg", null));
 
 		repository.save(new Usuarios(0L, "Manuela da Silva", "manuela@email.com.br", "13465278",
-				"https://i.imgur.com/NtyGneo.jpg"));
+				"https://i.imgur.com/NtyGneo.jpg", null));
 
 		repository.save(new Usuarios(0L, "Adriana da Silva", "adriana@email.com.br", "13465278",
-				"https://i.imgur.com/mB3VM2N.jpg"));
+				"https://i.imgur.com/mB3VM2N.jpg", null));
 
 		repository.save(
-				new Usuarios(0L, "Paulo Antunes", "paulo@email.com.br", "13465278", "https://i.imgur.com/JR7kUFU.jpg"));
+				new Usuarios(0L, "Paulo Antunes", "paulo@email.com.br", "13465278", "https://i.imgur.com/JR7kUFU.jpg", null));
 	}
 
 	@Test
